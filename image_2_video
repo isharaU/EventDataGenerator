@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # Define the path to the images folder and the output video file
-images_folder = '53'  
+images_folder = '84'  
 output_video = os.path.join('E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\20BN-JESTER\\trial', images_folder + '.mp4')
 path_to_images = 'E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\20BN-JESTER\\trial\\' 
 final_path = os.path.join(path_to_images, images_folder)
@@ -11,7 +11,7 @@ final_path = os.path.join(path_to_images, images_folder)
 os.chdir(final_path)
 
 # Run the FFmpeg command to create a video from the images
-subprocess.run(['ffmpeg', '-framerate', '30', '-i', '%05d.JPG',
-                '-vf', 'setpts=2*PTS,format=yuv420p', output_video])
+subprocess.run(['ffmpeg', '-framerate', '15', '-i', '%05d.JPG', 
+                '-vf', 'format=yuv420p', output_video])
 
 print(f"Video created successfully: {output_video}")
