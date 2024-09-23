@@ -3,12 +3,12 @@ import subprocess
 
 lower_bound = 2
 upper_bound = 2054
-directories = 'E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\20BN-JESTER\\Test\\'
-output_dir = 'E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\Converted-Jester'
+input_dir = 'E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\20BN-JESTER\\Test\\' # folder contain image contained folders
+output_dir = 'E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\Converted-Jester\\' # folder to save video
 
 for i in range(lower_bound, upper_bound + 1):
     read_dir = str(i)  
-    image_path = os.path.join(directories, read_dir)
+    image_path = os.path.join(input_dir, read_dir)
 
     if os.path.exists(image_path):
         output_file = os.path.join(output_dir, read_dir + '.mp4')
