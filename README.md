@@ -41,6 +41,8 @@ Before running the script, ensure you set the following variables:
 
 ## Part 2: Video to Event Data Conversion
 
+### There are versions i.e local & colab you can choose corresponding to your need.
+
 ### Prerequisites
 
 - NVIDIA GPU (the script checks for GPU availability)
