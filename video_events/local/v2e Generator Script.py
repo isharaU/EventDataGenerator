@@ -1,11 +1,6 @@
 import os
 
-# check if the GPU is working properly
-# download and update slomo model
 # clone & install v2e
-# uodate the input and output paths
-# update video_names file path
-
 # Installing dependencies
 # %pip install numba -q
 # %pip install engineering-notation -q
@@ -15,20 +10,20 @@ import os
 
 os.system("nvidia-smi")
 
-names = "/content/video_names.txt"
+names = "names_full.txt"
 
 # Open the file in read mode
 with open(names, "r") as file:
     for name in file:
         name = name.strip()
-        video_path = "/content/drive/MyDrive/V2E/input/"+ name + ".mp4"
+        video_path = "/input/"+ name + ".mp4"
 
         if video_path != "" and os.path.isfile(video_path):
             print("The chosen video file: {}".format(video_path))
         else:
             print("The file path is empty or invalid, choose a file")
 
-        output_folder = "/content/drive/MyDrive/V2E/output/" + name
+        output_folder = "/output/" + name
 
         overwrite = True
         unique_output_folder = True
@@ -46,8 +41,8 @@ with open(names, "r") as file:
         timestamp_resolution = 0.001
         auto_timestamp_resolution = True
 
-        # do manual download of SuperSloMo39.ckpt from https://github.com/SensorsINI/v2e/blob/main/input/SuperSloMo39.ckpt
-        slomo_model = "/content/v2e/input/SuperSloMo39.ckpt"
+        # download of SuperSloMo39.ckpt from https://github.com/SensorsINI/v2e/blob/main/input/SuperSloMo39.ckpt
+        slomo_model = "/SuperSloMo39.ckpt"
 
         condition = "Clean" #@param ["Custom", "Clean", "Noisy"]
 
