@@ -5,6 +5,14 @@ import os
 # clone & install v2e
 # uodate the input and output paths
 # update video_names file path
+
+# Installing dependencies
+# %pip install numba -q
+# %pip install engineering-notation -q
+# %pip install opencv-contrib-python -q
+# %pip install argcomplete -q
+# %pip install dv-processing -q
+
 os.system("nvidia-smi")
 
 names = "/content/video_names.txt"
