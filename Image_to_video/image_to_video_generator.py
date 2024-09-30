@@ -1,8 +1,8 @@
 import os
 import subprocess
 
-lower_bound = 2
-upper_bound = 2054
+lower_bound = 49968
+upper_bound = 148073
 input_dir = 'E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\20BN-JESTER\\Test\\' # folder contain image contained folders
 output_dir = 'E:\\Academic\\CS4203 - Research and Development Project\\DataSet\\Jester\\Converted-Jester\\' # folder to save video
 
