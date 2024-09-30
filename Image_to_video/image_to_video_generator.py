@@ -25,5 +25,6 @@ with open('video_names.txt', 'r') as file:
                             '-vf', 'format=yuv420p', output_file])
             
             print(f"Video {read_dir} created successfully!")
+            
         else:
             print(f"{read_dir} Error Occurred! Skipping...")
