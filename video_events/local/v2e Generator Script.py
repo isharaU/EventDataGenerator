@@ -16,12 +16,7 @@ names = "names_full.txt"
 with open(names, "r") as file:
     for name in file:
         name = name.strip()
-        video_path = "/input/"+ name + ".mp4"
-
-        if video_path != "" and os.path.isfile(video_path):
-            print("The chosen video file: {}".format(video_path))
-        else:
-            print("The file path is empty or invalid, choose a file")
+        path = "/input/"+ name 
 
         output_folder = "/output/" + name
 
@@ -44,7 +39,7 @@ with open(names, "r") as file:
         # download of SuperSloMo39.ckpt from https://github.com/SensorsINI/v2e/blob/main/input/SuperSloMo39.ckpt
         slomo_model = "/SuperSloMo39.ckpt"
 
-        condition = "Clean" #@param ["Custom", "Clean", "Noisy"]
+        condition = "Clean" #["Custom", "Clean", "Noisy"]
 
         # Do not change following parameters unless you are in the custom mode
         thres = 0.2 
@@ -72,7 +67,7 @@ with open(names, "r") as file:
         v2e_command = ["v2e"]
 
         # the video_path can be a video file or a folder of images
-        v2e_command += ["-i", video_path]
+        v2e_command += ["-i", path]
 
         # set the output folder
         v2e_command += ["-o", output_folder]
@@ -136,7 +131,6 @@ with open(names, "r") as file:
 
         final_v2e_command = " ".join(v2e_command)
 
-        print("The Final v2e command:")
         print(final_v2e_command)
 
         # Run command!
