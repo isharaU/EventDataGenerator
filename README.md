@@ -95,6 +95,7 @@ python video_to_event_conversion.py
 - The video-to-event conversion script uses the v2e tool, which simulates how a Dynamic Vision Sensor would capture the scene.
 - You can adjust various parameters to control the quality and characteristics of the event data output.
 - The script supports different output modes corresponding to various DVS sensor resolutions (e.g., dvs128, dvs240, dvs346, dvs640, dvs1024).
+- Since V2E is also compatible with image sequences as input we changed the video to event conversion script to use feed images instead of videos.
 
 ## Error Handling
 
