@@ -11,14 +11,16 @@ import os
 os.system("nvidia-smi")
 
 names = "names_full.txt"
+input_folder = "/input"
+output_folder = "/output"
 
 # Open the file in read mode
 with open(names, "r") as file:
     for name in file:
         name = name.strip()
-        path = "/input/"+ name 
+        path = input_folder + "/" + name 
 
-        output_folder = "/output/" + name
+        output_folder = output_folder + "/" + name
 
         overwrite = True
         unique_output_folder = True
