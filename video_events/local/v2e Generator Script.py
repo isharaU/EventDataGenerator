@@ -13,6 +13,7 @@ os.system("nvidia-smi")
 names = "names_full.txt"
 input_dir = "/input"
 output_dir = "/output"
+slowmo_path = "/SuperSloMo39.ckpt"
 
 # Open the file in read mode
 with open(names, "r") as file:
@@ -39,7 +40,7 @@ with open(names, "r") as file:
         auto_timestamp_resolution = True
 
         # download of SuperSloMo39.ckpt from https://github.com/SensorsINI/v2e/blob/main/input/SuperSloMo39.ckpt
-        slomo_model = "/SuperSloMo39.ckpt"
+        slomo_model = slowmo_path
 
         condition = "Clean" #["Custom", "Clean", "Noisy"]
 
