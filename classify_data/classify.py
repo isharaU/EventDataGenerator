@@ -23,6 +23,6 @@ def copy_folders(src_dir, text_file, dest_dir):
             print(f"Folder {folder_name} does not exist in {src_dir}")
 
 src_directory = 'E:/Academic/CS4203 - Research and Development Project/DataSet/Jester/20BN-JESTER/Train'   # The parent folder where all numbered folders are located
-text_file_path = 'E:/Academic/CS4203 - Research and Development Project/DataSet/Classified Dataset/labels/Swiping Down.txt'   # Path to the text file containing folder names
-dest_directory = 'E:/Academic/CS4203 - Research and Development Project/DataSet/Classified Dataset/data/Swiping Down'  # The folder where you want to copy the folders
+text_file_path = "E:/Academic/CS4203 - Research and Development Project/DataSet/Converting/Classified/labels/Sliding_Two_Fingers_Up.txt"   # Path to the text file containing folder names
+dest_directory = "E:/Academic/CS4203 - Research and Development Project/DataSet/Converting/Classified/data/Sliding_Two_Fingers_Up"  # The folder where you want to copy the folders
 copy_folders(src_directory, text_file_path, dest_directory)
